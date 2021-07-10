@@ -1,0 +1,82 @@
+<html>
+    <head>
+      <title>интукод</title>
+    </head>
+    <body>
+      <div id="main">
+          <ul id="list">
+              <li>html</li>
+              <li>css</li>
+          </ul>
+      </div>
+      <div id="copyright">(c) INTOCODE</div>
+      <script>
+      const dmt = () => {
+        const body = document.body
+        const h1 = document.createElement("h1")
+        h1.textContent = "Работа с DOM"
+        body.prepend(h1)
+
+        h1.addEventListener("click", () => {
+            h1.style.background = 'red'
+ });
+    }
+      
+      dmt();
+
+      
+
+      // Task 2
+      const main = () => {
+        const main2 = document.getElementById("main");
+        const a = document.createElement("a");
+        a.textContent = "статья о DOM"
+        a.href = "https://learn.javascript.ru/dom-nodes"
+        main2.append(a)
+        a.addEventListener("click", () => {
+            a.style.color = "white"  
+        })
+      }
+      main();
+
+  
+      //Task 3 
+    const bc = () => {
+      document.body.addEventListener("click", () => {
+            document.body.style.background = "yellow"  
+
+       })
+      }
+      bc();
+
+
+
+       //Task 4
+       const f = (text) => {
+        const list = document.getElementById("list");
+        const li = document.createElement("li")
+        li.textContent = text 
+        list.append(li)
+        list.addEventListener("click", () => {
+            list.style.color = "green" 
+        }) 
+      }
+      f("js");
+
+      //Task 5
+     const del = () => {
+      const rem = document.getElementById("copyright")
+      rem.addEventListener("click", () => {
+          rem.remove() 
+      })
+
+
+
+      };
+      del();
+      </script>
+    </body>
+    </html>
+
+
+    
